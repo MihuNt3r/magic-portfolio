@@ -95,9 +95,13 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Hi, I’m Misha — a full-stack developer who’s passionate about Web3, blockchain, and building microservices that actually make a difference.<br/>
+        <br/>
+        I work across the stack, writing both backend and frontend code using C#/.NET, Rust, Node.js, and modern JavaScript frameworks like Vue.js or React.<br/>
+        <br/>
+        For me, coding isn’t just about solving technical problems — it’s a way to express myself. It’s how I bring ideas to life, connect with others, and build things that matter.<br/>
+        <br/>
+        I care deeply about mental health and self-development, and I try to bring that purpose into everything I create — especially when it can help someone through their hardest moments.<br/>
       </>
     ),
   },
@@ -106,41 +110,86 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Out of The Box Systems",
+        timeframe: "Dec 2024 - Apr 2025",
+        role: "Intern Rust Developer",
+        shortDescription: "Intern Rust developer on Rustcamp. For the 4 months I was studying Rust concepts with mentors and peers.",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Learned basics of Rust language(ownership, borrowing, lifetimes,
+            generics and traits)
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Learned core concepts of Rust language(smart pointers, interior
+            mutability pattern, static and dynamic dispatch, phantom data)
+          </>,
+          <>
+            Learned how to write idiomatic code in Rust(newtype and typestate
+            patterns with phantom types, exhaustivity, sealing)
+          </>,
+          <>
+            Learned about Rust ecosystem(testing, procedural and declarative
+            macros, immutable collections, serialization/deserialization, logging
+            crates, command line arguments parsing, multithreading and async)
+          </>,
+          <>
+            Learned about applying Rust on backend
+          </>,
+          <>
+            Used Diesel ORM and PostgreSQL
+          </>,
+          <>
+            Developed thick and thin HTTP clients with reqwest crate
+          </>,
+          <>
+            Developed REST, gRPC and GraphQL APIs with Axum framework
           </>,
         ],
+        shortConclusion: "As a final capstone project I developed decentralized voting system\n" +
+            "with Solana blockchain. I used Anchor framework for smart contract\n" +
+            "development, React for UI development, Phantom wallet adapters for\n" +
+            "wallet connection. I received 4 approves for my project from mentors\n" +
+            "and peers. Also, I publicly defended this project.\n",
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Elfo SRL",
+        timeframe: "Nov 2021 - Jun 2024",
+        role: "Full Stack Developer(ASP.NET/Vue.js)",
+        shortDescription: "Mainly focused on back-end, was developing REST APIs with ASP.NET and background processes with Hangfire. Most often used NHibernate and Dapper as ORMs and MSSQL as a database.",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Worked with DDD approach and Clean Architecture
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Worked with CQRS pattern and MediatR library
+          </>,
+          <>
+            Developed Hangfire Jobs to validate and insert CSV data into staging tables<br/>
+          </>,
+          <>
+            Implemented SQL procedures to ensure data integrity in imported items
+          </>,
+          <>
+            Worked on refactoring of existing legacy SQL views and procedures.
+            Improved performance of existing queries
+          </>,
+          <>
+            Worked on front-end part with Typescript, Vue.js and Vuetify library
+          </>,
+          <>
+            Contributed to internal library of UI components
+          </>,
+          <>
+            Worked with Azure and Azure DevOps
           </>,
         ],
         images: [],
@@ -148,7 +197,7 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
@@ -161,41 +210,49 @@ const about = {
       },
     ],
   },
+  education: {
+    display: true, // set to false to hide this section
+    title: "Education",
+    institutions: [
+      {
+        name: "State University of Trade and Economics",
+        description: <>Master of Software Engineering</>,
+        timeframe: "2023 - 2024"
+      },
+      {
+        name: "National Aviation University",
+        description: <>Bachelor of Software Engineering</>,
+        timeframe: "2019 - 2023"
+      },
+    ],
+  },
   technical: {
     display: true, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Front End Development",
+        description: <>Vue.js, Vuetify, React</>,
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Rust Backend Development",
+        description: <>Axum, Diesel ORM, SQLx</>,
+      },
+      {
+        title: "Rust Smart Contracts Development",
+        description: <>Solana, Anchor Framework</>,
+      },
+      {
+        title: "Node.js Backend Development",
+        description: <>Express.js, Nest.js, TypeScript</>,
+      },
+      {
+        title: "C#/.Net Backend Development",
+        description: <>ASP.NET, NHibernate, Dapper, HangFire</>,
+      },
+      {
+        title: "Database Development",
+        description: <>MS SQL, Oracle, PostgreSQL, MongoDB</>,
       },
     ],
   },

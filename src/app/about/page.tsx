@@ -203,7 +203,10 @@ export default function About() {
                     <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
-                    <Column as="ul" gap="16">
+                    <Text variant="body-default-m" onBackground="brand-weak" marginBottom="m">
+                      {experience.shortDescription}
+                    </Text>
+                    <Column as="ul" gap="0">
                       {experience.achievements.map((achievement: JSX.Element, index: number) => (
                         <Text
                           as="li"
@@ -214,6 +217,11 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
+                    {experience.shortConclusion &&
+                      <Text variant="body-default-m" onBackground="brand-weak" marginTop="s">
+                        {experience.shortConclusion}
+                      </Text>
+                    }
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
                         {experience.images.map((image, index) => (
@@ -266,6 +274,31 @@ export default function About() {
             </>
           )}
 
+          {about.education.display && (
+              <>
+                <Heading as="h2" id={about.education.title} variant="display-strong-s" marginBottom="m">
+                  {about.education.title}
+                </Heading>
+                <Column fillWidth gap="l" marginBottom="40">
+                  {about.education.institutions.map((institution, index) => (
+                      <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                        <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                          <Text id={institution.name} variant="heading-strong-l">
+                            {institution.name}
+                          </Text>
+                          <Text variant="heading-default-xs" onBackground="neutral-weak">
+                            {institution.timeframe}
+                          </Text>
+                        </Flex>
+                        <Text variant="heading-default-xs" onBackground="neutral-weak">
+                          {institution.description}
+                        </Text>
+                      </Column>
+                  ))}
+                </Column>
+              </>
+          )}
+
           {about.technical.display && (
             <>
               <Heading
@@ -276,39 +309,13 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Column fillWidth gap="s">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
                   </Column>
                 ))}
               </Column>
