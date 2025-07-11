@@ -62,7 +62,7 @@ const home = {
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Turning dreams into code that touches lives</>,
   featured: {
-    display: true,
+    display: false,
     title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
